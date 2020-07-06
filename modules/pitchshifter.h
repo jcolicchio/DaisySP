@@ -69,7 +69,7 @@ class PitchShifter
         {
             gain_[i] = 0.0f;
             d_[i].Init();
-            phs_[i].Init(sr, 50, i == 0 ? 0 : (float)M_PI);
+            phs_[i].Init(sr, 50, i == 0 ? 0 : PI_F);
         }
         shift_up_ = true;
         del_size_ = SHIFT_BUFFER_SIZE;
@@ -111,11 +111,11 @@ class PitchShifter
         mod_[0] = fade1 * (del_size_ - 1);
         mod_[1] = fade2 * (del_size_ - 1);
 #ifdef USE_ARM_DSP
-        gain_[0] = arm_sin_f32(fade1 * (float)M_PI);
-        gain_[1] = arm_sin_f32(fade2 * (float)M_PI);
+	    gain_[0] = arm_sin_f32(fade1 * PI_F);
+	    gain_[1] = arm_sin_f32(fade2 * PI_F);
 #else
-        gain_[0] = sinf(fade1 * (float)M_PI);
-        gain_[1] = sinf(fade2 * (float)M_PI);
+	    gain_[0] = sinf(fade1 * PI_F);
+	    gain_[1] = sinf(fade2 * PI_F);
 #endif
 
         // Handle Delay Writing
