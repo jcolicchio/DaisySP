@@ -27,6 +27,7 @@ metro \
 mode \
 oscillator \
 phasor \
+pitchamdf \
 pluck \
 port \
 reverbsc \

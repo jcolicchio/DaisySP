@@ -46,6 +46,7 @@
 #include "modules/phasor.h"
 #include "modules/port.h"
 #include "modules/pitchshifter.h"
+#include "modules/pitchamdf.h"
 #include "modules/PolyPluck.h"
 #include "modules/pluck.h"
 #include "modules/reverbsc.h"
