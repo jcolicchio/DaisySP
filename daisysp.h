@@ -52,6 +52,7 @@
 #include "modules/samplehold.h"
 #include "modules/svf.h"
 #include "modules/tone.h"
+#include "modules/waveformbuffer.h"
 #include "modules/whitenoise.h"
 
 #endif
